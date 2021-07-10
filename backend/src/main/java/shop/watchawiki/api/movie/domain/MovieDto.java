@@ -7,7 +7,7 @@ import javax.persistence.Column;
 @Data
 // Dto --> 데이터를 주고받을 포맷
 public class MovieDto {
-    private Long movie_code;   // 영화 코드
+    private Long movieId;   // 영화 아이디
     private String movie_name;   // 영화 이름
     private String release_day; // 개봉일
     private int total_rating; // 총 평점

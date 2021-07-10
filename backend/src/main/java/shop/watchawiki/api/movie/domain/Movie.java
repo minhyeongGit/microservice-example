@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column private Long movie_code;   // 영화 코드
+    @Column private Long movieId;   // 영화 아이디
 
     @Column private String movie_name;   // 영화 이름
     @Column private String release_day; // 개봉일

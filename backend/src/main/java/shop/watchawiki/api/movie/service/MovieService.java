@@ -1,17 +1,20 @@
 package shop.watchawiki.api.movie.service;
 
-import shop.watchawiki.api.movie.domain.MovieDto;
+import lombok.RequiredArgsConstructor;
+import shop.watchawiki.api.movie.domain.Movie;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public interface MovieService {
-    void addMovie(MovieDto movievo); //영화 등록
-
-    MovieDto searchMovie(String movie_name) throws Exception; //영화 조회
-
-    void delMovie(String movie_name) ; //영화 삭제
-
-    ArrayList<MovieDto> listMovie() throws Exception; //영화 리스트 열람
+    void save(Movie movie);
+    List<Movie> findAll();
+    void existsById(long movieId);
+    int count();
+    Optional<Movie> findById(long movieId);
+    Movie getById(long movieId);
+    void deleteById(long movieId);
 }
